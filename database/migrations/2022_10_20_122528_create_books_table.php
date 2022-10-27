@@ -13,7 +13,7 @@ return new class extends Migration {
             $table->string("title");
             $table->string("synopsis");
             $table->string("coverphoto");
-            $table->string("writer_name");
+            $table->foreignIdFor(\App\Models\Writer::class);
 
 
             $table->timestamps();
