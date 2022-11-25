@@ -17,46 +17,47 @@ class WriterSeederr extends Seeder
      */
     public function run()
     {
-        $fakerID = Factory::create("id_ID");
-        $fakerFR = Factory::create("id_FR");
-        $fakerIT = Factory::create("id_IT");
-        $fakerRU = Factory::create("id_RU");
-        $fakerUS = Factory::create("id_US");
-
-
-        Writer::factory()->create([
-            "contact"=> $fakerID->phoneNumber,
-            "negara"=> $fakerID->country,
-            "deskripsi" => $fakerID-> text,
-            "image" => 'foto1.jpg'
-        ]);
-
-        Writer::factory()->create([
-            "contact"=> $fakerFR->phoneNumber,
-            "negara"=> $fakerFR->country,
-            "deskripsi" => $fakerFR-> text,
-            "image" => 'foto2.jpg'
-        ]);
-
-        Writer::factory()->create([
-            "contact"=> $fakerIT->phoneNumber,
-            "negara"=> $fakerIT->country,
-            "deskripsi" => $fakerIT-> text,
-            "image" => 'foto3.jpg'
-        ]);
-
-        Writer::factory()->create([
-            "contact"=> $fakerRU->phoneNumber,
-            "negara"=> $fakerRU->country,
-            "deskripsi" => $fakerRU-> text,
-            "image" => 'foto4.jpg'
-        ]);
-
-        Writer::factory()->create([
-            "contact"=> $fakerUS->phoneNumber,
-            "negara"=> $fakerUS->country,
-            "deskripsi" => $fakerUS-> text,
-            "image" => 'foto5.jpg'
-        ]);
+//        $fakerID = Factory::create("id_ID");
+//        $fakerFR = Factory::create("id_FR");
+//        $fakerIT = Factory::create("id_IT");
+//        $fakerRU = Factory::create("id_RU");
+//        $fakerUS = Factory::create("id_US");
+//
+//
+//        Writer::factory()->create([
+//            "contact"=> $fakerID->phoneNumber,
+//            "negara"=> $fakerID->country,
+//            "deskripsi" => $fakerID-> text,
+//            "image" => 'foto1.jpg'
+//        ]);
+//
+//        Writer::factory()->create([
+//            "contact"=> $fakerFR->phoneNumber,
+//            "negara"=> $fakerFR->country,
+//            "deskripsi" => $fakerFR-> text,
+//            "image" => 'foto2.jpg'
+//        ]);
+//
+//        Writer::factory()->create([
+//            "contact"=> $fakerIT->phoneNumber,
+//            "negara"=> $fakerIT->country,
+//            "deskripsi" => $fakerIT-> text,
+//            "image" => 'foto3.jpg'
+//        ]);
+//
+//        Writer::factory()->create([
+//            "contact"=> $fakerRU->phoneNumber,
+//            "negara"=> $fakerRU->country,
+//            "deskripsi" => $fakerRU-> text,
+//            "image" => 'foto4.jpg'
+//        ]);
+//
+//        Writer::factory()->create([
+//            "contact"=> $fakerUS->phoneNumber,
+//            "negara"=> $fakerUS->country,
+//            "deskripsi" => $fakerUS-> text,
+//            "image" => 'foto5.jpg'
+//        ]);
+        Writer::factory()->count(100)->create();
     }
 }

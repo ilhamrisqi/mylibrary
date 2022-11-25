@@ -14,7 +14,7 @@ class Book extends Model
         "title",
         "synopsis",
         "coverphoto",
-        "writer_name"
+        "writer_id"
     ];
 
     public function writer() : BelongsTo {

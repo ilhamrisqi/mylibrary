@@ -23,6 +23,9 @@ class Writer extends Model
         "image"
     ];
 
+    protected $with = ['books'];
+
+
     public function books(): HasMany
     {
         return $this->hasMany(Book::class);

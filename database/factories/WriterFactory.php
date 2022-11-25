@@ -20,7 +20,8 @@ class WriterFactory extends Factory
             "nama" => $this->faker->name,
             "negara" => $this->faker->country,
             "deskripsi" => $this->faker->text,
-            "image" => $this->faker->image,
+            "image" => "foto1.jpg",
+            "contact" => $this->faker->phoneNumber
         ];
     }
 }

@@ -36,6 +36,23 @@
                 <a class="nav-link active" aria-current="page" href="/">Home</a>
                 <a class="nav-link" href="/about">About</a>
                 <a class="nav-link" href="/contact">Contact</a>
+                @auth()
+                    @if(auth()->user()->status == 'admin')
+
+                        <a class="nav-link" href="/admin">Admin</a>
+
+                    @endif
+                @endauth
+
+                @auth()
+                    <form action="/logout" method="post">
+                        @csrf
+                        <button type="submit"  class="btn">Logout</button>
+                    </form>
+                @endauth
+                @guest()
+                <a class="nav-link" href="/login">Login</a>
+                @endguest
             </div>
         </div>
     </div>

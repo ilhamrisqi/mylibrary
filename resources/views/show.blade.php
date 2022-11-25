@@ -28,7 +28,7 @@
                     <td>{{$book->title}}</td>
                     <td>{{$book->synopsis}}</td>
                     <td>
-                        <img class="mt-25" src="image/{{$book->coverphoto}}"></td>
+                        <img class="mx-auto d-block rounded-3" width="110" src="image/{{$book->coverphoto}}"></td>
                 </tr>
             @endforeach
             </tbody>

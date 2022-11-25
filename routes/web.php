@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\WriterController;
+use \App\Http\Controllers\BooksController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,5 +35,16 @@ Route::get('/contact', function () {
 Route::get('/', [WriterController::class, 'index']);
 
 Route::get('/writer/{writer}', [WriterController::class, 'show']);
+
+Route::get('/admin', function () {
+    return view('admin.index',[
+        "pagetitle"=>"Admin"
+    ]);
+})->middleware(['admin']);
+
+
+Route::resource('books', \App\Http\Controllers\BooksController::class)->middleware(['admin']);
+
+require __DIR__.'/auth.php';
 
 //Route::get('/show', [\App\Http\Controllers\WriterController::class, 'show']);

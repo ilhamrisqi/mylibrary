@@ -30,30 +30,36 @@ class BookSeeder extends Seeder
                     'title'=>$fakerID->text,
                     'synopsis'=>'Synopsis Buku Penulis 1',
                     'writer_id'=> $writer,
+
                 ]);
             }else if($index==1){
                 Book::factory()-> create([
                     'title'=>$fakerID->text,
                     'synopsis'=>'Synopsis Buku Penulis 2',
                     'writer_id'=> $writer,
+
+
                 ]);
             }else if($index==2){
                 Book::factory()-> create([
                     'title'=>$fakerID->text,
                     'synopsis'=>'Synopsis Buku Penulis 3',
                     'writer_id'=> $writer,
+
                 ]);
             }else if($index==3){
                 Book::factory()-> create([
                     'title'=>$fakerID->text,
                     'synopsis'=>'Synopsis Buku Penulis 4',
                     'writer_id'=> $writer,
+
                 ]);
             }else if($index==4){
                 Book::factory()-> create([
                     'title'=>$fakerID->text,
                     'synopsis'=>'Synopsis Buku Penulis 5',
                     'writer_id'=> $writer,
+
                 ]);
             }
             $index++;
